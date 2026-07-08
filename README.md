@@ -82,7 +82,35 @@ application.properties
 
 ## 📸 Screenshots
 
-Screenshots will be added soon.
+### Home Page
+
+Displays all available yoga sessions.
+
+![Home](images/home.png)
+
+---
+
+### Home Page (Logged-in User)
+
+Shows the personalized welcome message after entering the user's name.
+
+![Home Logged In](images/home2.png)
+
+---
+
+### Reservations
+
+Users can view, update, and cancel their existing reservations.
+
+![Reservations](images/reservations.png)
+
+---
+
+### Update Reservation
+
+Allows users to change the selected yoga session.
+
+![Update Reservation](images/update.png)
 
 ---
 
