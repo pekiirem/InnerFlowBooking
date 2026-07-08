@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rezervasyon Güncelle</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<h1>✏️ Rezervasyon Güncelle</h1>
+
+<div class="reservation-card">
+
+    <form th:action="@{/update}" method="post">
+
+        <input type="hidden"
+               name="reservationId"
+               th:value="${reservation.id}">
+
+        <label>Yeni Ders Seç:</label>
+
+        <br><br>
+
+        <select name="sessionId">
+
+            <option
+                    th:each="yogaSession : ${sessions}"
+                    th:value="${yogaSession.id}"
+                    th:text="${yogaSession.title}">
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Güncelle
+        </button>
+
+    </form>
+
+</div>
+
+<div class="menu">
+    <a href="/reservations">Geri Dön</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f1;
+    margin: 40px;
+}
+
+h1 {
+    color: #2e5e4e;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #4a8f72;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+a:hover {
+    background-color: #3c745d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.menu {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu a {
+    margin: 0 10px;
+}
+
+li {
+    background-color: white;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    max-width: 700px;
+    line-height: 1.8;
+}
+.reservation-card {
+    background-color: white;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.reservation-card h3 {
+    color: #2e5e4e;
+    margin-top: 0;
+}
+
+.reservation-card p {
+    margin: 10px 0;
+}
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}

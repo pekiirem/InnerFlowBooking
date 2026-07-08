@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rezervasyonlarım</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<h1>📋 Rezervasyonlarım</h1>
+
+<div th:each="reservation : ${reservations}" class="reservation-card">
+
+    <h3>🧘 Yoga Dersi Rezervasyonu</h3>
+
+    <p>
+        <strong>Rezervasyon No:</strong>
+        <span th:text="${reservation.id}"></span>
+    </p>
+
+    <p>
+        <strong>Müşteri:</strong>
+        <span th:text="${reservation.customerName}"></span>
+    </p>
+
+    <p>
+        <strong>Ders:</strong>
+        <span th:text="${reservation.sessionTitle}"></span>
+    </p>
+    <a th:href="@{/cancel/{id}(id=${reservation.id})}">
+        Rezervasyonu İptal Et
+    </a>
+    <br><br>
+
+    <a th:href="@{/update/{id}(id=${reservation.id})}">
+        Rezervasyonu Güncelle
+    </a>
+</div>
+
+<div class="menu">
+    <a href="/">Ana Sayfa</a>
+</div>
+
+</body>
+
+
+</html>

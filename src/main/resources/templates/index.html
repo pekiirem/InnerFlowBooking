@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inner Flow Yoga Stüdyosu</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<h1>🧘Inner Flow Yoga Stüdyosu</h1>
+<div class="menu">
+    <a href="/">Dersler</a>
+    <a href="/reservations">Rezervasyonlarım</a>
+</div>
+
+<h3>
+    👋 Hoş Geldin,
+    <span th:text="${currentUser}"></span>
+</h3>
+<p class="subtitle">
+    Yoga derslerini inceleyebilir ve rezervasyon oluşturabilirsiniz.
+</p>
+<form action="/set-user" method="get">
+
+    <label>Ad Soyad:</label>
+
+    <input type="text" name="name" required>
+
+    <button type="submit">Kaydet</button>
+
+</form>
+
+<br>
+
+<br><br>
+<ul>
+    <li th:each="yogaSession : ${sessions}">
+
+        <b th:text="${yogaSession.title}"></b>
+        -
+        Eğitmen:
+        <span th:text="${yogaSession.instructor}"></span>
+        -
+        Seviye:
+        <span th:text="${yogaSession.level}"></span>
+        -
+        Kontenjan:
+        <span th:text="${yogaSession.capacity}"></span>
+
+        <a th:href="@{/reserve/{id}(id=${yogaSession.id})}">
+            Derse Katıl
+        </a>
+
+    </li>
+</ul>
+
+</body>
+</html>
